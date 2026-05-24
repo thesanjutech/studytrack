@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>StudyTrack</title>
+
+  <link rel="stylesheet"
+        href="style.css">
+
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+
+    <h1>StudyTrack</h1>
+
+    <p>
+      Your Learning Roadmap Partner
+    </p>
+
+  </header>
+
+  <!-- COURSE SELECT -->
+
+  <section class="selector">
+
+    <select id="courseSelect">
+
+      <option value="">
+        Select Course
+      </option>
+
+      <option value="class9">
+        9th Maths
+      </option>
+
+      <option value="class10">
+        10th Maths
+      </option>
+
+      <option value="pcm11">
+        11th PCM
+      </option>
+
+      <option value="commerce11">
+        11th Commerce
+      </option>
+
+      <option value="pcm12">
+        12th PCM
+      </option>
+
+      <option value="commerce12">
+        12th Commerce
+      </option>
+
+      <option value="bca">
+        BCA
+      </option>
+
+      <option value="btech">
+        BTech
+      </option>
+
+      <option value="bba">
+        BBA
+      </option>
+
+      <option value="bcom">
+        BCom
+      </option>
+
+      <option value="iit">
+        IIT Preparation
+      </option>
+
+      <option value="mca">
+        MCA
+      </option>
+
+      <option value="mba">
+        MBA
+      </option>
+
+      <option value="mtech">
+        MTech
+      </option>
+
+      <option value="mcom">
+        MCom
+      </option>
+
+    </select>
+
+    <button onclick="showRoadmap()">
+      Show Roadmap
+    </button>
+
+  </section>
+
+  <!-- ROADMAP -->
+
+  <section id="roadmapContainer">
+
+  </section>
+
+  <!-- CONTACT -->
+
+  <section class="contact">
+
+    <h2>
+      Contact StudyTrack
+    </h2>
+
+    <input type="text"
+           id="name"
+           placeholder="Your Name">
+
+    <input type="email"
+           id="email"
+           placeholder="Your Email">
+
+    <textarea id="message"
+              placeholder="Write Your Message">
+    </textarea>
+
+    <button onclick="sendMessage()">
+      Send Message
+    </button>
+
+  </section>
+
+  <!-- FIREBASE -->
+
+  <script type="module"
+          src="firebase.js">
+  </script>
+
+  <!-- DATA -->
+
+  <script src="roadmapData.js"></script>
+
+  <!-- MAIN JS -->
+
+  <script src="script.js"></script>
+
+</body>
+</html>
