@@ -10,8 +10,15 @@
 
   <title>StudyTrack</title>
 
+  <!-- CSS -->
+
   <link rel="stylesheet"
         href="style.css">
+
+  <!-- PWA -->
+
+  <link rel="manifest"
+        href="manifest.json">
 
 </head>
 
@@ -21,15 +28,32 @@
 
   <header>
 
-    <h1>StudyTrack</h1>
+    <h1>
+      StudyTrack
+    </h1>
 
     <p>
-      Complete Learning Roadmaps For Students
+      Complete Educational Roadmaps
+      From Class 9 To Master Degree
     </p>
 
   </header>
 
-  <!-- COURSE SELECT -->
+  <!-- SEARCH SECTION -->
+
+  <section class="topBar">
+
+    <input type="text"
+           id="searchInput"
+           placeholder="Search Courses...">
+
+    <button onclick="searchCourse()">
+      Search
+    </button>
+
+  </section>
+
+  <!-- COURSE SELECTOR -->
 
   <section class="selector">
 
@@ -39,29 +63,33 @@
         Select Course
       </option>
 
+      <!-- SCHOOL -->
+
       <option value="class9">
-        9th Mathematics
+        Class 9 Mathematics
       </option>
 
       <option value="class10">
-        10th Mathematics
+        Class 10 Mathematics
       </option>
 
       <option value="pcm11">
-        11th PCM
+        Class 11 PCM
       </option>
 
       <option value="commerce11">
-        11th Commerce
+        Class 11 Commerce
       </option>
 
       <option value="pcm12">
-        12th PCM
+        Class 12 PCM
       </option>
 
       <option value="commerce12">
-        12th Commerce
+        Class 12 Commerce
       </option>
+
+      <!-- BACHELOR -->
 
       <option value="bca">
         BCA
@@ -82,6 +110,8 @@
       <option value="iit">
         IIT Preparation
       </option>
+
+      <!-- MASTER -->
 
       <option value="mca">
         MCA
@@ -107,13 +137,15 @@
 
   </section>
 
-  <!-- ROADMAP -->
+  <!-- ROADMAP SECTION -->
 
   <section id="roadmapContainer">
 
+    <!-- Dynamic Roadmap Data -->
+
   </section>
 
-  <!-- CONTACT -->
+  <!-- CONTACT SECTION -->
 
   <section class="contact">
 
@@ -130,8 +162,7 @@
            placeholder="Enter Your Email">
 
     <textarea id="message"
-              placeholder="Write Your Message">
-    </textarea>
+              placeholder="Write Your Message"></textarea>
 
     <button onclick="sendMessage()">
       Send Message
@@ -139,16 +170,54 @@
 
   </section>
 
-  <!-- JS FILES -->
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>
+      © 2026 StudyTrack | Built By Sanju
+    </p>
+
+  </footer>
+
+  <!-- ROADMAP DATA -->
 
   <script src="roadmapData.js"></script>
 
+  <!-- MAIN SCRIPT -->
+
   <script src="script.js"></script>
 
+  <!-- FIREBASE -->
+
   <script type="module"
-          src="firebase.js">
+          src="firebase.js"></script>
+
+  <!-- SERVICE WORKER -->
+
+  <script>
+
+    if("serviceWorker" in navigator){
+
+      navigator.serviceWorker
+      .register("service-worker.js")
+
+      .then(() => {
+
+        console.log(
+          "Service Worker Registered"
+        );
+
+      })
+
+      .catch(error => {
+
+        console.log(error);
+
+      });
+    }
+
   </script>
 
 </body>
-
 </html>

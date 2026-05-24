@@ -1,5 +1,4 @@
 *{
-
   margin:0;
   padding:0;
   box-sizing:border-box;
@@ -7,215 +6,139 @@
 }
 
 body{
-
   background:#0f172a;
   color:white;
   padding:20px;
 }
 
-/* HEADER */
-
 header{
-
   text-align:center;
   margin-top:30px;
 }
 
 header h1{
-
-  font-size:55px;
+  font-size:60px;
   color:#38bdf8;
 }
 
 header p{
-
   margin-top:10px;
   color:#cbd5e1;
 }
 
-/* SELECT SECTION */
-
+.topBar,
 .selector{
-
-  margin-top:40px;
-
+  margin-top:35px;
   display:flex;
-
   justify-content:center;
-
-  align-items:center;
-
   gap:15px;
-
   flex-wrap:wrap;
 }
 
-/* SELECT */
-
-select{
-
-  width:320px;
-
+input,
+select,
+textarea{
   padding:14px;
-
   border:none;
-
   border-radius:10px;
-
-  font-size:16px;
+  width:320px;
 }
 
-/* BUTTON */
-
 button{
-
   padding:14px 22px;
-
   border:none;
-
   border-radius:10px;
-
   background:#38bdf8;
-
   color:white;
-
-  font-size:16px;
-
   cursor:pointer;
-
   transition:0.3s;
 }
 
 button:hover{
-
   background:#0ea5e9;
 }
 
-/* ROADMAP */
-
 #roadmapContainer{
-
-  max-width:1000px;
-
+  max-width:1100px;
   margin:auto;
-
   margin-top:40px;
 }
 
-/* CARD */
-
 .card{
-
   background:#1e293b;
-
   padding:25px;
-
   border-radius:15px;
+  animation:fade 0.5s ease;
 }
-
-/* TITLE */
 
 .card h2{
-
   color:#38bdf8;
-
-  margin-bottom:15px;
 }
 
-/* DESCRIPTION */
-
 .description{
-
   margin-top:15px;
-
   line-height:1.7;
 }
 
-/* YEAR BOX */
-
 .stepBox{
-
   background:#0f172a;
-
   padding:20px;
-
   border-radius:12px;
-
   margin-top:25px;
 }
 
 .stepBox h3{
-
   color:#38bdf8;
-
   margin-bottom:15px;
 }
 
 .stepBox p{
-
   margin-bottom:12px;
-
   line-height:1.7;
 }
 
-/* LINK */
-
 .stepBox a{
-
   display:inline-block;
-
   margin-top:10px;
-
   padding:10px 16px;
-
   background:#38bdf8;
-
   color:white;
-
   border-radius:8px;
-
   text-decoration:none;
 }
 
-/* CONTACT */
-
 .contact{
-
-  max-width:1000px;
-
+  max-width:1100px;
   margin:auto;
-
   margin-top:50px;
-
   background:#1e293b;
-
   padding:25px;
-
   border-radius:15px;
 }
 
 .contact h2{
-
   color:#38bdf8;
-
   margin-bottom:20px;
 }
 
-.contact input,
 .contact textarea{
-
-  width:100%;
-
-  padding:14px;
-
-  margin-top:15px;
-
-  border:none;
-
-  border-radius:10px;
+  height:120px;
 }
 
-.contact textarea{
+footer{
+  text-align:center;
+  margin-top:40px;
+  color:#94a3b8;
+}
 
-  height:120px;
+@keyframes fade{
+  from{
+    opacity:0;
+    transform:translateY(20px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
 }

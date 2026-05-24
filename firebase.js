@@ -14,8 +14,6 @@ import {
 
 from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
-/* FIREBASE CONFIG */
-
 const firebaseConfig = {
 
   apiKey: "AIzaSyD-MqXRhFqlRoKG4Lg9J8gRiNmsZEapkUM",
@@ -31,15 +29,11 @@ const firebaseConfig = {
   appId: "1:1000876214113:web:98f6b0c6f76e2fb9556720"
 };
 
-/* INITIALIZE */
-
 const app =
 initializeApp(firebaseConfig);
 
 const db =
 getFirestore(app);
-
-/* SEND MESSAGE */
 
 window.sendMessage = async () => {
 
@@ -68,22 +62,14 @@ window.sendMessage = async () => {
     await addDoc(
       collection(db, "messages"),
       {
-
         name,
         email,
         message,
-        createdAt:
-        new Date()
+        createdAt:new Date()
       }
     );
 
     alert("Message Sent Successfully!");
-
-    document.getElementById("name").value = "";
-
-    document.getElementById("email").value = "";
-
-    document.getElementById("message").value = "";
 
   }catch(error){
 

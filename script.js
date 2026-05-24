@@ -49,44 +49,32 @@ function showRoadmap(){
 
       <div class="stepBox">
 
-        <h3>
-          ${year.year}
-        </h3>
+        <h3>${year.year}</h3>
 
         <p>
-
-          <strong>
-            Subjects:
-          </strong>
-
+          <strong>Subjects:</strong>
           ${year.subjects.join(", ")}
-
         </p>
 
         <p>
-
-          <strong>
-            Focus:
-          </strong>
-
+          <strong>Focus:</strong>
           ${year.focus}
-
         </p>
 
         <p>
+          <strong>Do:</strong>
+          ${year.do}
+        </p>
 
-          <strong>
-            Avoid:
-          </strong>
-
+        <p>
+          <strong>Do Not:</strong>
           ${year.avoid}
-
         </p>
 
         <a href="${year.resource}"
            target="_blank">
 
-           Free Learning Resource
+           Watch Tutorial
 
         </a>
 
@@ -94,9 +82,31 @@ function showRoadmap(){
     `;
   });
 
-  html += `
-    </div>
-  `;
+  html += `</div>`;
 
   container.innerHTML = html;
+}
+
+function searchCourse(){
+
+  const input =
+  document.getElementById("searchInput")
+  .value
+  .toLowerCase();
+
+  const select =
+  document.getElementById("courseSelect");
+
+  for(let option of select.options){
+
+    if(
+      option.text.toLowerCase()
+      .includes(input)
+    ){
+
+      select.value = option.value;
+
+      break;
+    }
+  }
 }
