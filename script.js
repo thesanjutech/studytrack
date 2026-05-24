@@ -11,7 +11,7 @@ function showRoadmap(){
   if(selectedCourse === ""){
 
     container.innerHTML =
-    "<p>Please Select a Course</p>";
+    "<h2>Please Select A Course</h2>";
 
     return;
   }
@@ -19,34 +19,57 @@ function showRoadmap(){
   const course =
   roadmapData[selectedCourse];
 
+  if(!course){
+
+    container.innerHTML =
+    "<h2>Roadmap Coming Soon...</h2>";
+
+    return;
+  }
+
   let html = `
 
     <div class="card">
 
       <h2>${course.title}</h2>
 
+      <p>
+        <strong>Duration:</strong>
+        ${course.duration}
+      </p>
+
       <p class="description">
         ${course.description}
       </p>
   `;
 
-  course.steps.forEach(step => {
+  course.years.forEach(year => {
 
     html += `
 
       <div class="stepBox">
 
         <h3>
-          ${step.title}
+          ${year.year}
         </h3>
 
         <p>
 
           <strong>
-            What To Do:
+            Subjects:
           </strong>
 
-          ${step.details}
+          ${year.subjects.join(", ")}
+
+        </p>
+
+        <p>
+
+          <strong>
+            Focus:
+          </strong>
+
+          ${year.focus}
 
         </p>
 
@@ -56,14 +79,14 @@ function showRoadmap(){
             Avoid:
           </strong>
 
-          ${step.avoid}
+          ${year.avoid}
 
         </p>
 
-        <a href="${step.source}"
+        <a href="${year.resource}"
            target="_blank">
 
-           Watch Free Video
+           Free Learning Resource
 
         </a>
 

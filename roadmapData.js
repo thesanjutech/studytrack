@@ -2,67 +2,162 @@ const roadmapData = {
 
   bca: {
 
-    title: "BCA Complete Roadmap",
+    title: "Bachelor of Computer Applications",
+
+    duration: "3 Years",
 
     description:
-    "BCA students ke liye proper technical roadmap jo beginner se advanced level tak guide karega.",
+    "BCA is a technical degree focused on programming, software development and computer applications.",
 
-    steps: [
+    years: [
 
       {
 
-        title: "Learn C Programming",
+        year: "1st Year",
 
-        details:
-        "Sabse pehle C language seekho. Variables, loops, arrays, functions aur pointers strong karo. Roz practice karo.",
+        subjects: [
+
+          "Programming in C",
+
+          "Computer Fundamentals",
+
+          "Mathematics",
+
+          "Digital Electronics",
+
+          "Communication Skills"
+        ],
+
+        focus:
+        "Build strong programming basics and improve logical thinking.",
 
         avoid:
-        "Sirf theory mat padho aur code copy paste mat karo.",
+        "Do not skip coding practice.",
 
-        source:
+        resource:
         "https://www.youtube.com/watch?v=irqbmMNs2Bo"
       },
 
       {
 
-        title: "Learn Data Structures",
+        year: "2nd Year",
 
-        details:
-        "Arrays, Linked Lists, Stack, Queue, Trees aur Graphs seekho. Coding questions solve karo.",
+        subjects: [
 
-        avoid:
-        "DSA ko skip mat karo.",
+          "Data Structures",
 
-        source:
-        "https://www.youtube.com/watch?v=RBSGKlAvoiM"
-      },
+          "DBMS",
 
-      {
+          "Operating System",
 
-        title: "Learn DBMS",
+          "Java",
 
-        details:
-        "SQL queries, joins, normalization aur database design seekho.",
+          "Web Development"
+        ],
 
-        avoid:
-        "Without practice DBMS mat padho.",
-
-        source:
-        "https://www.youtube.com/watch?v=HXV3zeQKqGY"
-      },
-
-      {
-
-        title: "Web Development",
-
-        details:
-        "HTML, CSS, JavaScript aur responsive websites banana seekho.",
+        focus:
+        "Build projects and strengthen development skills.",
 
         avoid:
-        "Projects copy paste mat karo.",
+        "Avoid only theoretical learning.",
 
-        source:
+        resource:
         "https://www.youtube.com/watch?v=G3e-cpL7ofc"
+      },
+
+      {
+
+        year: "3rd Year",
+
+        subjects: [
+
+          "Python",
+
+          "Computer Networks",
+
+          "Cloud Computing",
+
+          "Software Engineering",
+
+          "Major Project"
+        ],
+
+        focus:
+        "Prepare for internships and placements.",
+
+        avoid:
+        "Do not delay project building.",
+
+        resource:
+        "https://www.youtube.com/watch?v=_uQrJ0TkZlc"
+      }
+
+    ]
+  },
+
+  btech: {
+
+    title: "Bachelor of Technology",
+
+    duration: "4 Years",
+
+    description:
+    "BTech focuses on engineering, programming, software and technical problem solving.",
+
+    years: [
+
+      {
+
+        year: "1st Year",
+
+        subjects: [
+
+          "Engineering Mathematics",
+
+          "Physics",
+
+          "C Programming",
+
+          "Engineering Graphics",
+
+          "Communication Skills"
+        ],
+
+        focus:
+        "Develop technical fundamentals.",
+
+        avoid:
+        "Do not ignore mathematics.",
+
+        resource:
+        "https://www.youtube.com/watch?v=irqbmMNs2Bo"
+      },
+
+      {
+
+        year: "2nd Year",
+
+        subjects: [
+
+          "Data Structures",
+
+          "OOP",
+
+          "DBMS",
+
+          "Operating Systems",
+
+          "Computer Networks"
+        ],
+
+        focus:
+        "Improve coding and problem solving.",
+
+        avoid:
+        "Avoid learning without projects.",
+
+        resource:
+        "https://www.youtube.com/watch?v=RBSGKlAvoiM"
       }
 
     ]
